@@ -65,6 +65,15 @@ After execution, the test report is displayed in your browser, showing the resul
 ## Note
 The reference was taken in that way to generate those test results.
 
+### Checking the differences
+In the report click on the image of "DIFF" section
+
+<img width="1737" alt="image" src="https://github.com/camhost01/BackstopJS_Practice/assets/39304271/a7227449-7163-4cb0-8b18-4acdb7c82481">
+
+And move the "Scrubber" to watch the difference between reference and test image
+
+<img width="1718" alt="image" src="https://github.com/camhost01/BackstopJS_Practice/assets/39304271/5d72248f-46a3-4e9c-8d8e-9eeab5bc5152">
+
 
 
 
