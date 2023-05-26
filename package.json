@@ -1,0 +1,22 @@
+{
+    "scripts": {
+      "clean:bitmaps_test": "rm -rf backstop_data/bitmaps_test",
+      "clean:bitmaps_reference": "rm -rf backstop_data/bitmaps_reference",
+      "test": "npm run clean:bitmaps_test && backstop test",
+      "scenarios": "backstop test",
+      "approve_scenarios": "backstop approve",
+      "logo_test": "backstop test --filter=Only_Logo",
+      "logo_reference": "backstop reference --filter=Only_Logo",
+      "logo_approve": "backstop approve --filter=Only_Logo",
+      "webPage_test": "backstop test --filter=WebPage_Without_Logo",
+      "webPage_reference": "backstop reference --filter=WebPage_Without_Logo",
+      "webPage_approve": "backstop approve --filter=WebPage_Without_Logo",
+      "click_test": "backstop test --filter=Click_Over_Product",
+      "click_reference": "backstop reference --filter=Click_Over_Product",
+      "click_approve": "backstop approve --filter=Click_Over_Product",
+      "logSwaglab_test": "backstop test --filter=login_swagsLabs",
+      "logSwaglab_reference": "backstop reference --filter=login_swagsLabs",
+      "logSwaglab_approve": "backstop approve --filter=login_swagsLabs"
+    }
+  }
+  

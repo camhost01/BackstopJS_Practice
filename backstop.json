@@ -1,0 +1,88 @@
+{
+  "id": "Visual Automation Test",
+  "viewports": [
+    {
+      "label": "Laptop",
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "onBeforeScript": "puppet/onBefore.js",
+  "onReadyScript": "puppet/onReady.js",
+  "scenarios": [
+    {
+      "label": "Only_Logo",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://automationexercise.com/test_cases",
+      "readySelector": ".logo",
+      "selectors": [".logo"],
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "WebPage_Without_Logo",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://automationexercise.com/test_cases",
+      "readySelector": ".logo",
+      "delay":0,
+      "removeSelectors": [".logo"],
+      "selectorExpansion": false,
+      "postInteractionWait": 2,
+      "misMatchThreshold" : 0.3,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "Click_Over_Product",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://automationexercise.com/test_cases",
+      "readySelector": ".logo",
+      "clickSelector": "a[href='/products']",
+      "delay": 50,
+      "selectorExpansion": false,
+      "misMatchThreshold" : 0.5,
+      "requireSameDimensions": true
+    },
+
+   {
+      "label": "login_swagsLabs",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://www.saucedemo.com/",
+      "readySelector": "#login-button",
+      "delay":500,
+      "keyPressSelectors":[
+        {
+          "selector": "#user-name",
+          "keyPress": "standard_user"
+        },
+        {
+          "selector": "#password",
+          "keyPress": "secret_sauce"
+        }
+      ],
+      "clickSelector": "#login-button",
+      "postInteractionWait": 5,
+      "hideSelectors":[".inventory_item_price"],
+      "selectorExpansion": false,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    }
+  ],
+  
+  "paths": {
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "report": ["browser"],
+  "engine": "puppeteer",
+  "engineOptions": {
+    "args": ["--no-sandbox"]
+  },
+  "asyncCaptureLimit": 2,
+  "asyncCompareLimit": 50,
+  "debug": false,
+  "debugWindow": false
+}
