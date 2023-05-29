@@ -11,8 +11,10 @@ This project was build to serve as a guide using the backstopJS tool which is us
 ```sh
 git clone https://github.com/camhost01/BackstopJS_Practice.git
 ```
-Extract all files from "BackstopJS_Practice" to your local folder
-
+move to the folder
+```sh
+cd BackstopJS_Practice.git
+```
 ### backstop_data > bitmaps_reference
 Inside this folder you will find the images against which you will contrast the execution of the test cases.
 
