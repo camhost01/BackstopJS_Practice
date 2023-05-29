@@ -13,7 +13,7 @@ git clone https://github.com/camhost01/BackstopJS_Practice.git
 ```
 move to the folder
 ```sh
-cd BackstopJS_Practice.git
+cd BackstopJS_Practice
 ```
 ### backstop_data > bitmaps_reference
 Inside this folder you will find the images against which you will contrast the execution of the test cases.
